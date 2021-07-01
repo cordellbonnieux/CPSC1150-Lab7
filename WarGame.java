@@ -56,15 +56,68 @@ public class WarGame{
     }
 
  	public static int findWinner(int user, int comp){
- 		// find the winner and return -1, 1 or 0 if it is tie, 
+ 		
+		// find the card played
+		user /= 4;
+		comp /= 4;
+
+		// 0 = 13, so change the possible 0s to 13s for comparrison
+		if (user == 0)
+			user = 13;
+		else if (comp == 0)
+			comp = 13;
+
+		// find the winner and return -1, 1 or 0 if it is tie, 
 		if (user > comp)
 			return 1;
 		else if (comp > user)
 			return -1;
 		else 
-			return 0;
- 		//user wins or computer wins 	
+			return 0;	
  	}
 
  	// add more methods if needed. 
+	public static String getRank(int num) {
+		
+		// calculates the card number 
+		num /= 4;
+		
+		String rank;
+
+		// create a text label for the card
+		switch(num) {
+			case 1: rank = "Ace";
+				break;
+			case 2: rank = "Two";
+				break;
+			case 3: rank = "Three";
+				break;
+			case 4: rank = "Four";
+				break;
+			case 5: rank = "Five";
+				break;
+			case 6: rank = "Six";
+				break;
+			case 7: rank = "Seven";
+				break;
+			case 8: rank = "Eight";
+				break;
+			case 9: rank = "Nine";
+				break;
+			case 10: rank = "Ten";
+				break;
+			case 11: rank = "Jack";
+				break;
+			case 12: rank = "Queen";
+				break;
+			default: rank = "King";
+		}
+
+		return rank;
+	}
+
+	public static String getSuit(int num) {
+		
+		return "";
+	}
 }
