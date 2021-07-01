@@ -15,12 +15,22 @@ public class WarGame{
 	}
 
 	public static int getInput(Scanner input){
-		// TODO: prompt user to enter a number between 1 and 52, 
-		//		 then validate and return it
+		// prompt user to enter a number between 1 and 52, 
+		System.out.print("Please enter an integer between 1 and 52: ");
+		int num = input.nextInt();
+
+		// then validate and return it
+		if (num > 52 || num < 1)
+			return getInput(input);
+
+		return num;
 	}	
 
 	public static int genInput(){
-		//TODO : generate and return a random integer number between 1 and 52
+		// generate and return a random integer number between 1 and 52
+		int num = (int)(1 + Math.random() * 52);
+
+		return num;
     }
 
     public static void printRoundInfo(int r, int user, int comp){
@@ -46,7 +56,13 @@ public class WarGame{
     }
 
  	public static int findWinner(int user, int comp){
- 		//TODO: find the winner and return -1, 1 or 0 if it is tie, 
+ 		// find the winner and return -1, 1 or 0 if it is tie, 
+		if (user > comp)
+			return 1;
+		else if (comp > user)
+			return -1;
+		else 
+			return 0;
  		//user wins or computer wins 	
  	}
 
