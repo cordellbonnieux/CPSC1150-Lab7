@@ -2,6 +2,7 @@ import java.util.Scanner;
 /**
  * <h2> Game of War </h2>
  * <b>Student: Cordell Bonnieux</b><br>
+ * <b>Student ID:</b><br>
  * <b>Class: CPSC 1150 W01</b><br>
  * <b>Professor: Dr. Bita Shadgar</b><br>
  * <b>Date: June 30 2021</b>
