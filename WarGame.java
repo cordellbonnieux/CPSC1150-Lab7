@@ -79,12 +79,13 @@ public class WarGame{
  	// add more methods if needed. 
 	public static String getRank(int num) {
 		
-		// calculates the card number 
+		// calculate the card number 
 		num /= 4;
 		
+		// var to store rank name
 		String rank;
 
-		// create a text label for the card
+		// assign the rank text name
 		switch(num) {
 			case 1: rank = "Ace";
 				break;
@@ -118,6 +119,23 @@ public class WarGame{
 
 	public static String getSuit(int num) {
 		
-		return "";
+		// calculate the suit
+		num %= 4;
+
+		// var to store suit name
+		String suit = "";
+
+		// assign suit name 
+		switch(num) {
+			case 0: suit = "Diamonds";
+				break;
+			case 1: suit = "Clubs";
+				break;
+			case 2: suit = "Hearts";
+				break;
+			case 3: suit = "Spades";
+		}
+
+		return suit;
 	}
 }
